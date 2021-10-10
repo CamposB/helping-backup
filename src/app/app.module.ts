@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './menu/menu.component';
+
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,12 +15,17 @@ import { DashComponent } from './dash/dash.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MenuComponent } from './menu/menu-usuario/menu.component';
+import { AdmMenuComponent } from './menu/menu-adm/menu-adm.component';
+import { ModeradorMenuComponent } from './menu/menu-moderador/menu-moderador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DashComponent
+    DashComponent,
+    AdmMenuComponent,
+    ModeradorMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatGridListModule,
     MatCardModule,
     MatMenuModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
