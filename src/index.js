@@ -18,6 +18,10 @@ sequelize
     console.log("Erro ao conectar com DB!", error)
   })
 
+  app.get('/CadastroEvento', function(req, res){
+    res.render('CadastroEvento');
+});
+
 app.get('/CadastroEntidade', function(req, res){
     res.render('cadent');
 });
