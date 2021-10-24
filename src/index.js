@@ -4,6 +4,7 @@ const app = express();
 const sequelize = require("./database/database.js");
 const entidade = require("./database/Entidade");
 const bodyParser = require("body-parser");
+const evento = require("./database/evento.js");
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -17,7 +18,15 @@ sequelize
   }).catch((msgErro) => {
     console.log("Erro ao conectar com DB!", error)
   })
-
+  app.get("/",(req, res) => {
+    evento.findAll({ raw: true, order:[
+        ['id','DESC'] // ASC = Crescente || DESC = Decrescente
+    ]}).then(evento => {
+        res.render("index",{
+          evento: evento
+        });
+    });
+});
   app.get('/CadastroEvento', function(req, res){
     res.render('CadastroEvento');
 });
