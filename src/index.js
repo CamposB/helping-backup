@@ -48,12 +48,9 @@ app.get("/eventobyzonaleste",(req ,res) => {
       where: {zona: LESTE}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
@@ -66,12 +63,9 @@ app.get("/eventobyzonasul",(req ,res) => {
       where: {zona: ZONA}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
@@ -84,12 +78,9 @@ app.get("/eventobyzonanorte",(req ,res) => {
       where: {zona: ZONA}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
@@ -102,12 +93,9 @@ app.get("/eventobyzonaoeste",(req ,res) => {
       where: {zona: ZONA}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
@@ -122,12 +110,9 @@ app.get("/eventobyONG",(req ,res) => {
       where: {tipoEntidade: TIPO}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
@@ -140,12 +125,9 @@ app.get("/eventobyparoquia",(req ,res) => {
       where: {tipoEntidade: TIPO}
   }).then(evento => {
       if(evento != undefined){ 
-
         res.render("filter",{
         evento: evento,
-
           });
-
       }else{ // Não encontrada
           res.redirect("/");
       }
