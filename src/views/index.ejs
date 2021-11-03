@@ -10,7 +10,7 @@
   rel="stylesheet"
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"crossorigin="anonymous"/>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />  
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,42 +28,27 @@
         <hr>
         <h1> Eventos </h1>
         <hr>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioZonaNorte">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Zona Norte
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioZonaOeste">
-        <label class="form-check-label" for="flexRadioDefault2">
-          Zona Oeste
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioZonaLeste">
-        <label class="form-check-label" for="flexRadioDefault2">
-          Zona Leste
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioZonaSul" >
-        <label class="form-check-label" for="flexRadioDefault2">
-          Zona Sul
-        </label>
-      </div>
 
+          <br>
+          
+          <button type="button" href="https://www.youtube.com" class="btn btn-primary btn-sm">Zona Norte</button>
+          <button type="button" class="btn btn-primary btn-sm">Zona Sul</button>
+          <button type="button" class="btn btn-primary btn-sm">Zona Leste</button>
+          <button type="button" class="btn btn-primary btn-sm">Zona Oeste</button>
+
+          <br>
 
         <% evento.forEach(evento => { %>
             <br>
-            <div class="card w-25">
+            
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="/img/sopa.jpg" alt="Imagem de capa do card">
                 <div class="card-body">
                     <h3><%= evento.nome %></h3><hr>
                     <h4><%= evento.desc %></h4>
                 </div>
                 <div class="card-footer">
-
+                  <a href="#" class="btn btn-primary">Visitar</a>
                 </div>
             </div>
         <% }) %>
